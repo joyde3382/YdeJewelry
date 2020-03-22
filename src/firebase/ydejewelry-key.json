@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "ydejewelry",
+  "private_key_id": "7e4c5a8c34062ac3ddf306a730f933268d947f02",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDFUXlL/Vnpf4Lu\nXJJBXfI89NbPbL5hx+3tpxCp23xNcDuLpUwLJRozpoWo8bD+EcNZp9yHnQW3wnXq\nSxfW2QjIxMCqx9Y2p8VO/bWkGASSHKaxR6hTQ2kY3yylZ7s8bH9pXP/y3q4NqYWP\n9ccKX5m+wN/NQbEJVLKpltyi3LubtMZ3QeF5Tt6suBPlVSSwW926FaO5ef0RXjXJ\nDPzL3sKj3BOxAt7tzEt4I0ZEGGUK/SoDH0upnOOJvAzELK8SmZ0yri8iGnP6vq2/\nT965/a1L8RivkZSNSKdG2o9OvQj+YqH0o7SJv9YpEwaJJ4vrV3/0gFlKZuI8jjz6\nthZSPZvDAgMBAAECggEAM82+ILs1Pd5iS542L78wd9x4ASE1oopQ5xHziAS9z77l\ngzY0jsCA7oqLkN1TcIDNXt55QYlyFNqTBp4MdjWo3rz5MF0i2lqVrLVjWN+NY6bu\nBKEhiiqqjwMYv5xKRgTeNpVaBTN9Uszs6ezHAuwyeyg8GbFjf2WjOm8HIiL9hlUr\ntmRDWR1DAVr26X+A2GHppJFjDl7Wjy1aJ/EUq+XTVa7NRMbGBo9gpAQGJKv4oQjt\n3dfr2OQHUt9HwI730MiW3eLyARD4cLiY+qb1fwbfGeLYu6fPVdBV80LhlZ8R/EhF\n4I8zWg2EYlpDZiIlQ6479ZuB6mFmrCVWqNHtmWg28QKBgQDkZ2iyCXIxjnq60gXt\nOL4VKAzB+FybKIMRY0uYvVwT8KAsjT0i387TJV2PWZ16H1EMBKfYonGDFfZ1+rVn\n+ztFYMsLqtGwz1l+/++j+0Mm4v89RVtfNvBTru2YTFYzKFnMk8wMB6qyBEph6nxK\n7hT7WZ6MF58b8RrSnVpk08wfrwKBgQDdKJOtOrTy46X/4vpQjd0EUMMbbVmoC/h+\nGIR4EZFscD+ymFSG2+Na7rB+0EMxbgtqZg3Ym0WtxwXqG/EY+LZ1ewd5OcMKnu0t\nRVfV9USQ7sNWbFEBNWEMgoSYIuqa/HoOh3sV2MCBbxt17NFaE7vfZWqhsfjjSOvc\nLt5wi00WLQKBgFlHNnxJBvLp/30g9SIZyOsaIYp8Wy5m8nyMdJM6iVBeAS4I8zm7\ng+uyslSDMfP3Y8Wv2C/spzQXFKRfICOJ50wiHpvr5FUZZ6Elx3UwlLoRhrVbc/DO\n17fOK58ZT6RlhFxb9SlKoeU9mhmV/4mGcHsjN78IyK+yWcqzqQ66XxKPAoGAJegL\nj9iNJUiRrk9YOjBmnpO9LVlL0brjh7FqGy5fr6d5s4HakxbjXDWnOMU3jyRefokp\nfGP4yHVhdSP+6hnPJEnHGScmYA6ndmf5Synz66eRAaIlLEDa9or0cSMi9RerUAw2\ns6LoNAc4PLkvlPHm9L5sTXS0xTg9fQrng4DM4K0CgYBmrZNlNk6SSi1d9fYO0Z1Q\nJdf4KL76QZ6Gx3JlZ3pKLx+blPaLV75i+0NixVPF+JGqkdvbcwCG8CdDJZQtZjwu\nIBLjwlbr+HnY4TPDgTLW4DY1Ya9IFdXn0BAlWhBl3ZQftHN5rocfdKZHP5u7LyET\nKEiNX+C+dbqnHUflxwwt3Q==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-u860y@ydejewelry.iam.gserviceaccount.com",
+  "client_id": "100284033091743416323",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-u860y%40ydejewelry.iam.gserviceaccount.com"
+}

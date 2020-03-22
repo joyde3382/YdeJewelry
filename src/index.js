@@ -7,6 +7,9 @@ import { ProductProvider } from './context';
 
 import registerServiceWorker from './registerServiceWorker';
 
+import firebase from './firebase/Firebase';
+
+
 ReactDOM.render(
     <ProductProvider>
         <Router>
