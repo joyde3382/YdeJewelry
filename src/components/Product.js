@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { ProductConsumer } from '../context';
 import PropTypes from 'prop-types';
+// import firebase from '../firebase/Firebase';
+
+
 
 export default class Product extends Component {
     render() {

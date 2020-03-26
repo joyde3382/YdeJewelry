@@ -8,6 +8,9 @@ import Details from './components/Details';
 import Cart from './components/Cart';
 import Default from './components/Default';
 import Modal from './components/Modal';
+import About from './components/About';
+
+// import firebase from './firebase/Firebase';
 
 class App extends Component {
   render() {
@@ -17,6 +20,7 @@ class App extends Component {
        <Switch>
          <Route exact path="/" component={ProductList} />
          <Route path="/details" component={Details} />
+         <Route path="/about" component={About} />
          <Route path="/cart" component={Cart} />
          <Route component={Default} />
        </Switch>

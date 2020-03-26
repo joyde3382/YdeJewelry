@@ -1,8 +1,13 @@
 import React, { Component } from 'react'
-import { storeProducts, detailProduct } from './data';
+import { detailProduct } from './data';
+// import firebase from './firebase/Firebase';
+import "firebase/firestore";
+import 'firebase/storage';
 const ProductContext = React.createContext();
 // Provider
 // Consumer 
+
+let db = null;
 
 class ProductProvider extends Component {
     state= {
@@ -14,19 +19,46 @@ class ProductProvider extends Component {
 
     };
     componentDidMount() {
+        this.initFirebase();
         this.setProducts();
+    }
+
+
+    initFirebase = () => {
+
+        var firebase = require("firebase/app");
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDKk2lIktVfYmapmBnEYLRbwqYHnxloKFc",
+            authDomain: "ydesjewelry.firebaseapp.com",
+            databaseURL: "https://ydesjewelry.firebaseio.com",
+            projectId: "ydesjewelry",
+            storageBucket: "ydesjewelry.appspot.com",
+            messagingSenderId: "741435813498",
+            appId: "1:741435813498:web:46f81fcd9d37c9a2cb55c3"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        db = firebase.firestore();
     }
 
     setProducts = () => {
         let tempProducts = [];
-        storeProducts.forEach(item => {
-            const singleItem = {...item};
-            tempProducts = [...tempProducts, singleItem]
-        })
+        db.collection('Products').get().then((snapshot) => {
+            snapshot.docs.forEach(doc => {
+              let data = doc.data();
 
-        this.setState(() => {
-            return {products: tempProducts}
-        })
+              const singleItem = {...data};
+              
+              tempProducts = [...tempProducts, singleItem]
+
+              this.setState({products: tempProducts}) 
+              console.log(doc.data())
+            })
+          }).catch(function (error) {
+              console.log("Error getting document:", error);
+          });
     }
 
     getItem = (id) => {

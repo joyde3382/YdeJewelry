@@ -21,9 +21,12 @@ class Navbar extends Component {
                     className="navbar-brand" />
                 </Link>
                 <ul className="navbar-nav align-items-center">
-                    <li className="nav-item ml-5">
+                    <li className="nav-item ml-5 d-flex">
                         <Link to="/" className="nav-link">
                             products
+                        </Link>
+                        <Link to="/about" className="nav-link">
+                            about
                         </Link>
                     </li>
                 </ul>
@@ -47,6 +50,11 @@ const NavWrapper = styled.nav`
         color: var(--mainWhite) !important;
         font-size: 1.3rem;
         text-transform: capitalize;
+        padding: 1rem;
+    }
+    .nav-link:hover {
+        color: var(--mainWhite);
+        cursor: pointer;
     }
 `
 // 1 rem = 16px
