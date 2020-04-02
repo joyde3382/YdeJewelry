@@ -6,7 +6,7 @@ import Navbar from '../../components/Navbar';
 import Routing from '../../routing/Routing';
 import Welcome from '../../components/Welcome';
 
-import { ProductConsumer, ProductProvider } from '../../context';
+import { ProductConsumer, ProductProvider } from '../../context/context';
 
 
 export default class Layout extends Component {
@@ -15,11 +15,9 @@ export default class Layout extends Component {
             <Aux>
                 <React.Fragment>
                     <Navbar />
-                    <ProductProvider>
                         <Welcome /> 
                         <Routing />
                         <Modal />
-                    </ProductProvider>
                 </React.Fragment> 
             </Aux>
         )

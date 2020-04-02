@@ -1,17 +1,25 @@
 import React, { Component } from 'react'
-import { detailProduct } from './data';
-import firebase from './firebase/Firebase';
-import placeHolderImage from '../src/website.jpg';
+import { detailProduct } from '../data';
+import firebase from '../firebase/Firebase';
+import placeHolderImage from '../website.jpg';
+import PRODUCTS_QUERY from './index';
+import { useQuery } from '@apollo/react-hooks';
+
 const ProductContext = React.createContext();
 // Provider
 // Consumer 
+
+
 
 class ProductProvider extends Component {
 
     constructor() {
         super()
+        
         // this.initFirebase();
     }
+
+    
     state= {
         products: [],
         detailProduct: detailProduct,
@@ -46,23 +54,27 @@ class ProductProvider extends Component {
     // }
 
     setProducts = () => {
+        
+        
 
-        const db = firebase.firestore();
-        let tempProducts = [];
-        db.collection('Products').get().then((snapshot) => {
-            snapshot.docs.forEach(doc => {
-              let data = doc.data();
+        // this.setState({products: tempProducts}) 
 
-              const singleItem = {...data};
+        // const db = firebase.firestore();
+        // let tempProducts = [];
+        // db.collection('Products').get().then((snapshot) => {
+        //     snapshot.docs.forEach(doc => {
+        //       let data = doc.data();
+
+        //       const singleItem = {...data};
               
-              tempProducts = [...tempProducts, singleItem]
+        //       tempProducts = [...tempProducts, singleItem]
 
-              this.setState({products: tempProducts}) 
-              console.log(doc.data())
-            })
-          }).catch(function (error) {
-              console.log("Error getting document:", error);
-          });
+        //       this.setState({products: tempProducts}) 
+        //       console.log(doc.data())
+        //     })
+        //   }).catch(function (error) {
+        //       console.log("Error getting document:", error);
+        //   });
     }
 
     loadImage = (image) => {

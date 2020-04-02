@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { ProductConsumer } from '../context';
+import { ProductConsumer } from '../context/context';
 import placeHolderImage from '../../src/product-1.png';
 export default class Welcome extends Component {
     render() {

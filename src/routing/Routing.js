@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom';
 
-import ProductList from '../components/ProductList';
+import ProductList from '../components/products/ProductList';
 import Details from '../components/Details';
 import Cart from '../components/Cart';
 import Default from '../components/Default';
