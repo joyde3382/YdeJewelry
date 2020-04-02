@@ -1,49 +1,53 @@
 import React, { Component } from 'react'
 import { detailProduct } from './data';
-// import firebase from './firebase/Firebase';
-import "firebase/firestore";
-import 'firebase/storage';
+import firebase from './firebase/Firebase';
+import placeHolderImage from '../src/website.jpg';
 const ProductContext = React.createContext();
 // Provider
 // Consumer 
 
-let db = null;
-
 class ProductProvider extends Component {
+
+    constructor() {
+        super()
+        // this.initFirebase();
+    }
     state= {
         products: [],
         detailProduct: detailProduct,
         cart: [],
         modalOpen: false,
         modalProduct: detailProduct,
-
+        tempImage: placeHolderImage
     };
     componentDidMount() {
-        this.initFirebase();
         this.setProducts();
     }
 
 
-    initFirebase = () => {
+    // initFirebase = () => {
 
-        var firebase = require("firebase/app");
+    //     var firebase = require("firebase/app");
 
-        const firebaseConfig = {
-            apiKey: "AIzaSyDKk2lIktVfYmapmBnEYLRbwqYHnxloKFc",
-            authDomain: "ydesjewelry.firebaseapp.com",
-            databaseURL: "https://ydesjewelry.firebaseio.com",
-            projectId: "ydesjewelry",
-            storageBucket: "ydesjewelry.appspot.com",
-            messagingSenderId: "741435813498",
-            appId: "1:741435813498:web:46f81fcd9d37c9a2cb55c3"
-        };
+    //     const firebaseConfig = {
+    //         apiKey: "AIzaSyDKk2lIktVfYmapmBnEYLRbwqYHnxloKFc",
+    //         authDomain: "ydesjewelry.firebaseapp.com",
+    //         databaseURL: "https://ydesjewelry.firebaseio.com",
+    //         projectId: "ydesjewelry",
+    //         storageBucket: "ydesjewelry.appspot.com",
+    //         messagingSenderId: "741435813498",
+    //         appId: "1:741435813498:web:46f81fcd9d37c9a2cb55c3"
+    //     };
 
-        firebase.initializeApp(firebaseConfig);
+    //     firebase.initializeApp(firebaseConfig);
 
-        db = firebase.firestore();
-    }
+    //     db = firebase.firestore();
+    //     storage = firebase.storage().ref();
+    // }
 
     setProducts = () => {
+
+        const db = firebase.firestore();
         let tempProducts = [];
         db.collection('Products').get().then((snapshot) => {
             snapshot.docs.forEach(doc => {
@@ -59,6 +63,22 @@ class ProductProvider extends Component {
           }).catch(function (error) {
               console.log("Error getting document:", error);
           });
+    }
+
+    loadImage = (image) => {
+        // make this independant of file types
+        // storage.chi
+
+        const storage = firebase.storage().ref();
+        storage.child(`${image}.jpg`).getDownloadURL().then((url) => {
+            this.setState(() => {
+                return {tempImage: url}
+            })
+            
+
+        }).catch((error) => {
+            // Handle any errors
+        });
     }
 
     getItem = (id) => {
@@ -110,7 +130,8 @@ class ProductProvider extends Component {
                     handleDetail: this.handleDetail,
                     addToCart: this.addToCart,
                     openModal: this.openModal,
-                    closeModal: this.closeModal
+                    closeModal: this.closeModal,
+                    loadImage: this.loadImage
                 }}
             >
                 {this.props.children}

@@ -22,7 +22,7 @@ class Navbar extends Component {
                 </Link>
                 <ul className="navbar-nav align-items-center">
                     <li className="nav-item ml-5 d-flex">
-                        <Link to="/" className="nav-link">
+                        <Link to="/products" className="nav-link">
                             products
                         </Link>
                         <Link to="/about" className="nav-link">
